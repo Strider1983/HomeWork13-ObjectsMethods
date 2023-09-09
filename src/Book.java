@@ -20,12 +20,10 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
-
     @Override
-    public String toString() {
-        return "Книга: " + this.title + ", Автор: " + this.author + ", Год издания: " + this.year;
+    public int hashCode() {
+        return java.util.Objects.hash(title);
     }
-
     @Override
     public boolean equals(Object other) {
         if (this.getClass() != other.getClass()) {
@@ -34,5 +32,10 @@ public class Book {
         Book warAndPeace = (Book) other;
         return author.equals(warAndPeace.author);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Книга: " + this.title + ", Автор: " + this.author + ", Год издания: " + this.year;
     }
 }
