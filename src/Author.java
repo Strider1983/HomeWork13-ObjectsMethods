@@ -9,8 +9,9 @@ public class Author {
     public String getName() {
         return this.name;
     }
-    public String getSurName() {
-        return this.surName;
+    public String toString() {
+        return this.name + " " + this.surName;
     }
+
 }
 
